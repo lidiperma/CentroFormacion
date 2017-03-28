@@ -14,8 +14,8 @@ public static Connection ConexionCentroFormacion() throws ClassNotFoundException
     
     String classname="com.mysql.jdbc.Driver";
     String url = "jdbc:mysql://localhost/academia";
-                String user = "root";
-                String password = "root";
+    String user = "root";
+    String password = "root";
     
     Class.forName(classname);
     conexion=DriverManager.getConnection(url,user,password);

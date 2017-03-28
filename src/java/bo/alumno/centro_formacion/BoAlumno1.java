@@ -19,7 +19,7 @@ public class BoAlumno1 {
         alumno.setNombre(request.getParameter("nombre"));
         alumno.setApellido(request.getParameter("apellido"));
         DaoAlumno.insertarAlumno(alumno.getIdAlumno(), alumno.getNombre(), alumno.getApellido());
-        response.sendRedirect("/CentroFormacion/MostrarInsertarAlumno");
+        response.sendRedirect("/CentroFormacion/mostrarInsertarAlumno");
 
 } 
     
@@ -32,7 +32,7 @@ public class BoAlumno1 {
         alumno.setApellido(request.getParameter("apellido"));
         DaoAlumno.actualizarAlumno(alumno.getIdAlumno(), alumno.getNombre(), alumno.getApellido());
        //Pendiente de devolver a la vista para mostrar el resultado...por ahora:
-        response.sendRedirect("/CentroFormacion/MostrarActualizarAlumno");
+        response.sendRedirect("/CentroFormacion/mostrarActualizarAlumno");
        
     }
 }

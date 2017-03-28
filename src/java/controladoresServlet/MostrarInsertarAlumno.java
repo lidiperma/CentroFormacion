@@ -26,7 +26,7 @@ public class MostrarInsertarAlumno extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet mostrarServletAlumno</title>");            
+            out.println("<title>Servlet MostrarInsertarAlumno</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Alumnos en la lista</h1>");

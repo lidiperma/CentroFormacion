@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>ControladorServletAlumno</servlet-name>
-        <servlet-class>controladoresServlet.FormularioInsertarAlumno</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>LogCentroFormacion</servlet-name>
         <servlet-class>controladoresServlet.LogCentroFormacion</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>mostrarServletAlumno</servlet-name>
-        <servlet-class>controladoresServlet.MostrarInsertarAlumno</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ControladorServletProfesor</servlet-name>
-        <servlet-class>controladoresServlet.ControladorServletProfesor</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>FormularioInsertarAlumno</servlet-name>
         <servlet-class>controladoresServlet.FormularioInsertarAlumno</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>ControladorServletAlumno</servlet-name>
-        <url-pattern>/ControladorServletAlumno</url-pattern>
-    </servlet-mapping>
+    <servlet>
+        <servlet-name>FormularioActualizarAlumno</servlet-name>
+        <servlet-class>controladoresServlet.FormularioActualizarAlumno</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MostrarInsertarAlumno</servlet-name>
+        <servlet-class>controladoresServlet.MostrarInsertarAlumno</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MostrarActualizarAlumno</servlet-name>
+        <servlet-class>controladoresServlet.MostrarActualizarAlumno</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LogCentroFormacion</servlet-name>
         <url-pattern>/LogCentroFormacion</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>mostrarServletAlumno</servlet-name>
-        <url-pattern>/mostrarServletAlumno</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ControladorServletProfesor</servlet-name>
-        <url-pattern>/ControladorServletProfesor</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>FormularioInsertarAlumno</servlet-name>
-        <url-pattern>/FormularioInsertarAlumno</url-pattern>
+        <url-pattern>/formularioInsertarAlumno</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FormularioActualizarAlumno</servlet-name>
+        <url-pattern>/formularioActualizarAlumno</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MostrarInsertarAlumno</servlet-name>
+        <url-pattern>/mostrarInsertarAlumno</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MostrarActualizarAlumno</servlet-name>
+        <url-pattern>/mostrarActualizarAlumno</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -16,8 +16,9 @@ public class Alumno extends Persona implements Imprime{
         super();
     }
 
-    public Alumno(String nombre, String apellido, String DNI) {
+    public Alumno(String idAlumno, String nombre, String apellido, String DNI) {
         super(nombre, apellido, DNI);
+        this.idAlumno = idAlumno;
     }
     
     public Alumno(ArrayList<TituloAcademico> listaAlumnoTitutloAcademico, String nombre, String apellido, String DNI) {
