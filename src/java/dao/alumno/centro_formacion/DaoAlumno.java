@@ -53,12 +53,18 @@ public class DaoAlumno {
       ConexionCentroFormacion.cerrarConexion();
         
     }
-    //metodo delete
-      public static void borrarAlumno (String idalumno);
-      Connection conexion=ConexionCentroFormacion.ConexionCentroFormacion();
-      String consultaSQL = "select from alumno where idalumno=?";
-      PreparedStatement actualizar=conexion.prepareStatement(consultaSQL);
-      buscar.setString(1, idalumno);
-      int filas 
     
+    //metodo delete
+      public static void borrarAlumno (String idalumno) throws ClassNotFoundException, SQLException{
+      Connection conexion=ConexionCentroFormacion.ConexionCentroFormacion();
+      String consultaSQL = "delete from alumno where idalumno=?";
+      PreparedStatement buscar=conexion.prepareStatement(consultaSQL);
+      buscar.setString(1, idalumno);
+      int filasAfectadas=buscar.executeUpdate(consultaSQL);
+      System.out.println("Numero de filas insertadas:"+filasAfectadas);
+      buscar.close();
+      ConexionCentroFormacion.cerrarConexion();
+      
+      }
+      
 }
