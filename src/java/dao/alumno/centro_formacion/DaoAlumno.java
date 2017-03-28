@@ -40,8 +40,7 @@ public class DaoAlumno {
     public static void actualizarAlumno(String nombre,String apellido, String idalumno) throws SQLException, ClassNotFoundException {
     
       Connection conexion=ConexionCentroFormacion.ConexionCentroFormacion();
-      String consultaSQL = "update into alumno (idalumno,nombre,apellido) values ";
-      consultaSQL += "('" + idalumno + "','" + nombre + "','" + apellido + "')";
+      String consultaSQL = "update alumno set nombre=?, apellido=? where idalumno=?";
       PreparedStatement actualizar=conexion.prepareStatement(consultaSQL);  
       
       actualizar.setString(1, nombre);
@@ -54,6 +53,12 @@ public class DaoAlumno {
       ConexionCentroFormacion.cerrarConexion();
         
     }
+    //metodo delete
+      public static void borrarAlumno (String idalumno);
+      Connection conexion=ConexionCentroFormacion.ConexionCentroFormacion();
+      String consultaSQL = "select from alumno where idalumno=?";
+      PreparedStatement actualizar=conexion.prepareStatement(consultaSQL);
+      buscar.setString(1, idalumno);
+      int filas 
     
-      //falta metodo delete 
 }
