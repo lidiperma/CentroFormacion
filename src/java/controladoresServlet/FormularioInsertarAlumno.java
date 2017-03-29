@@ -16,16 +16,10 @@ public class FormularioInsertarAlumno extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException, ClassNotFoundException {
-            
-            HttpSession misession = (HttpSession) request.getSession();
-            boolean log=(boolean) misession.getAttribute("ok");
-            
-            if(log==true){               
+                  
                 BoAlumno1.procesarInsertarPeticionAlumno(request, response);
             
-            }else{
-                response.sendRedirect("/CentroFormacion/login.html");
-            }
+            
     }
 
     @Override

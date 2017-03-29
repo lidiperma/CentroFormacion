@@ -16,17 +16,12 @@ public class FormularioActualizarAlumno extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException, ClassNotFoundException {
-            
-            HttpSession misession = (HttpSession) request.getSession();
-            boolean log=(boolean) misession.getAttribute("ok");
-            
-            if(log==true){               
+                         
                 BoAlumno1.procesarActualizarAlumno(request, response);
             
-            }else{
-                response.sendRedirect("/CentroFormacion/login.html");
             }
-    }
+    
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -56,5 +51,6 @@ public class FormularioActualizarAlumno extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }
-
+    
+    
 }

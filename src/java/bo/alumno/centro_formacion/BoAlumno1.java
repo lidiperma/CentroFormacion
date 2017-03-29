@@ -25,7 +25,7 @@ public class BoAlumno1 {
     
     
     public static void procesarActualizarAlumno(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, IOException{
-    
+        
         Alumno alumno=new Alumno();
         alumno.setIdAlumno(request.getParameter("idalumno"));
         alumno.setNombre(request.getParameter("nombre"));
